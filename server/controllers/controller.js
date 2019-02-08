@@ -51,9 +51,16 @@ module.exports = {
     getPost: (req, res) => {
         const db = req.app.get('db');
         const id = Number(req.params.id);
-        console.log(id)
         db.user.get_post([id])
         .then(post => {res.status(200).send(post)})
         .catch(err => {res.status(500).send('error getting post')})
+    },
+    createPost: (req, res) => {
+        const db = req.app.get('db');
+        const { user_id } = req.session.user;
+        const { title, image_url, content } = req.body;
+        db.user.create_post([user_id, title, image_url, content])
+        .then(() => {res.sendStatus(200)})
+        .catch(err => {console.log(err)})
     }
 }
