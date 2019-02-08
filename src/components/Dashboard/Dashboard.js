@@ -15,7 +15,6 @@ class Dashboard extends Component{
         //do join to create postList
         axios.get('/api/posts')
         .then(res => {
-            console.log(res.data)
             this.setState({
                 postList: res.data
             })
@@ -37,7 +36,7 @@ class Dashboard extends Component{
                             <p>checkbox</p>
                         </div>
                     </div>
-                    <div>
+                    <div className='all-posts-wrapper'>
                         {
                             this.state.postList.map(post => (
                                 <Post

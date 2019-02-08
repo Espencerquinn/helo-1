@@ -30,3 +30,4 @@ app.post('/auth/logout', ctrl.logout);
 //user data
 app.get('/api/user', ctrl.getUser);
 app.get('/api/posts', ctrl.getPosts)
+app.get('/api/post/:id', ctrl.getPost)

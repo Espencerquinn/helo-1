@@ -47,5 +47,13 @@ module.exports = {
         db.user.get_posts()
         .then(posts => {res.status(200).send(posts)})
         .catch(err => {res.status(500).send('error getting posts')})
+    },
+    getPost: (req, res) => {
+        const db = req.app.get('db');
+        const id = Number(req.params.id);
+        console.log(id)
+        db.user.get_post([id])
+        .then(post => {res.status(200).send(post)})
+        .catch(err => {res.status(500).send('error getting post')})
     }
 }
