@@ -1,0 +1,31 @@
+.sidebar-wrapper {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff9770+0,ff70a6+100 */
+    background: #ff9770; /* Old browsers */
+    background: -moz-linear-gradient(top, #ff9770 0%, #ff70a6 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ff9770 0%,#ff70a6 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ff9770 0%,#ff70a6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9770', endColorstr='#ff70a6',GradientType=0 ); /* IE6-9 */
+    display: fixed;
+    height: 100vh;
+    width: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: 2px 0px 10px darkgrey;
+}
+
+.sidebar-wrapper:hover{
+    cursor: pointer;
+}
+
+.profile {
+    background-color: #fff;
+    width: 80px;
+    border-radius: 50%;
+    align-self: center;
+}
+
+.nav-but {
+    width: 40px;
+    align-self: center;
+}

@@ -23,5 +23,9 @@ massive(DB_CONNECTION).then(db => {
 })
 
 //authentication
-// app.post('/auth/login', ctrl.login);
-// app.post('/auth/register', ctrl.register);
+app.post('/auth/login', ctrl.login);
+app.post('/auth/register', ctrl.register);
+app.post('/auth/logout', ctrl.logout);
+
+//user data
+app.get('/api/user', ctrl.getUser);

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Auth.css'
 import axios from 'axios';
 import { connect } from 'react-redux';
-import { updateUser} from './../../ducks/reducer';
+import { updateUser } from './../../ducks/reducer';
 
 class Auth extends Component{
     constructor(props){
@@ -14,17 +14,16 @@ class Auth extends Component{
     }
 
     componentDidMount(){
-        const { id } =this.props;
-        if (id) {
+        const { user_id } = this.props;
+        if (user_id) {
             this.props.history.push('/dashboard')
         } else {
             axios.get('/api/user')
             .then(res => {
                 this.props.updateUser(res.data)
-                this.props.history.push('./dashboard')
+                this.props.history.push('/dashboard')
             })
             .catch(err => {
-                console.log(err)
             })
         }
     }
@@ -62,17 +61,19 @@ class Auth extends Component{
     render(){
         const { username, password } = this.state;
         return(
-            <div className='login-wrapper'>
-                <div className='login-box'>
-                    <div>
-                        <img className='logo' src={'./graphics/logo.png'} className="App-logo" alt="logo" />
-                        <h1>Helo</h1>
-                    </div>
-                    <div className='login-input'>Username:<input value={username} onChange={(e) => handleChange(e.target.value)} /></div>
-                    <div className='login-input'>Password:<input type={password} value={username} onChange={(e) => handleChange(e.target.value)} /></div>
-                    <div>
-                        <button onClick={this.login} className='login-button'>Login</button>
-                        <button onClick={this.register} className='login-button'>Register</button>
+            <div className='login-background'>
+                <div className='login-wrapper'>
+                    <div className='login-box'>
+                        <div>
+                            <img className='login-logo' src={'./graphics/logo.png'} alt="logo" />
+                            <h1>Helo</h1>
+                        </div>
+                        <div className='login-input'>Username:<input value={username} onChange={(e) => this.handleChange('username', e.target.value)} /></div>
+                        <div className='login-input'>Password:<input type='password' value={password} onChange={(e) => this.handleChange('password', e.target.value)} /></div>
+                        <div>
+                            <button onClick={this.login} className='login-button'>Login</button>
+                            <button onClick={this.register} className='login-button'>Register</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -82,7 +83,7 @@ class Auth extends Component{
 
 function mapStateToProps(state){
     return {
-        id: state.id
+        user_id: state.user_id
     }
 }
 
