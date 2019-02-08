@@ -10,20 +10,6 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.login-box {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff9770+0,ffd670+100 */
-  background: #ff9770; /* Old browsers */
-  background: -moz-linear-gradient(left, #ff9770 0%, #ffd670 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, #ff9770 0%,#ffd670 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, #ff9770 0%,#ffd670 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9770', endColorstr='#ffd670',GradientType=1 ); /* IE6-9 */
-}
-
 .sidebar-container {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff9770+0,ff70a6+100 */
   background: #ff9770; /* Old browsers */
