@@ -41,5 +41,11 @@ module.exports = {
         } else {
             res.sendStatus(401)
         }
+    },
+    getPosts: (req, res) => {
+        const db = req.app.get('db');
+        db.user.get_posts()
+        .then(posts => {res.status(200).send(posts)})
+        .catch(err => {res.status(500).send('error getting posts')})
     }
 }

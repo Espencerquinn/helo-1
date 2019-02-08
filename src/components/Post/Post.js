@@ -1,14 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Post.css'
 
-class Post extends Component{
-    render(){
-        return(
-            <div>
-                Post
-            </div>
-        )
-    }
+export default function Post(props){
+    const { id, title, username, profile_pic} = props;
+    return(
+        <div>
+            {id}
+            {title}
+            {username}
+            {profile_pic}
+        </div>
+    )
 }
 
-export default Post;
