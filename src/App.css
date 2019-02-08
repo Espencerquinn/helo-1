@@ -1,32 +1,34 @@
 .App {
   text-align: center;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff70a6+0,ff9770+35,ffd670+68,e9ff70+100 */
+  background: #ff70a6; /* Old browsers */
+  background: -moz-linear-gradient(left, #ff70a6 0%, #ff9770 35%, #ffd670 68%, #e9ff70 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #ff70a6 0%,#ff9770 35%,#ffd670 68%,#e9ff70 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #ff70a6 0%,#ff9770 35%,#ffd670 68%,#e9ff70 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff70a6', endColorstr='#e9ff70',GradientType=1 ); /* IE6-9 */
+  height: 100vh;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+  height: 80px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.login-box {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff9770+0,ffd670+100 */
+  background: #ff9770; /* Old browsers */
+  background: -moz-linear-gradient(left, #ff9770 0%, #ffd670 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #ff9770 0%,#ffd670 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #ff9770 0%,#ffd670 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9770', endColorstr='#ffd670',GradientType=1 ); /* IE6-9 */
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sidebar-container {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff9770+0,ff70a6+100 */
+  background: #ff9770; /* Old browsers */
+  background: -moz-linear-gradient(top, #ff9770 0%, #ff70a6 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #ff9770 0%,#ff70a6 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #ff9770 0%,#ff70a6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9770', endColorstr='#ff70a6',GradientType=0 ); /* IE6-9 */
 }
